@@ -63,7 +63,6 @@ msgstr "Ubicación de destino"
 #. module: stock_move_location
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location__destination_location_disable
 #, fuzzy
-#| msgid "Destination Location"
 msgid "Destination Location Disable"
 msgstr "Ubicación destino"
 
@@ -77,9 +76,13 @@ msgstr "Nombre mostrado"
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location__edit_locations
 #: model_terms:ir.ui.view,arch_db:stock_move_location.view_wiz_stock_move_location_form_stock_move_location
 #, fuzzy
-#| msgid "Origin Location"
 msgid "Edit Locations"
 msgstr "(editar)"
+
+#. module: stock_move_location
+#: model_terms:ir.ui.view,arch_db:stock_move_location.view_picking_form
+msgid "Fill with stock"
+msgstr ""
 
 #. module: stock_move_location
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location__id
@@ -156,9 +159,14 @@ msgstr "La cantidad movida no puede superar la cantidad máxima o ser negativo"
 #. module: stock_move_location
 #: model:ir.actions.act_window,name:stock_move_location.wiz_stock_quant_location_action
 #, fuzzy
-#| msgid "Move from location..."
 msgid "Move to location..."
 msgstr "Mover desde otra ubicación"
+
+#. module: stock_move_location
+#: code:addons/stock_move_location/models/stock_picking.py:37
+#, python-format
+msgid "Moves lines already exists"
+msgstr ""
 
 #. module: stock_move_location
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location__origin_location_id
@@ -169,7 +177,6 @@ msgstr "Ubicación de origen"
 #. module: stock_move_location
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location__origin_location_disable
 #, fuzzy
-#| msgid "Origin Location"
 msgid "Origin Location Disable"
 msgstr "Origen"
 
@@ -188,6 +195,12 @@ msgstr "Tipo de operación"
 #: model_terms:ir.ui.view,arch_db:stock_move_location.view_wiz_stock_move_location_form_stock_move_location
 msgid "Planned Transfer"
 msgstr "Transferencia Planificada"
+
+#. module: stock_move_location
+#: code:addons/stock_move_location/models/stock_picking.py:35
+#, python-format
+msgid "Please choose a source end location"
+msgstr ""
 
 #. module: stock_move_location
 #: model:ir.model.fields,field_description:stock_move_location.field_wiz_stock_move_location_line__product_id
@@ -223,6 +236,12 @@ msgid "Stock Move"
 msgstr "Movimiento de existencias"
 
 #. module: stock_move_location
+#: model:ir.model,name:stock_move_location.model_stock_picking
+#, fuzzy
+msgid "Transfer"
+msgstr "Transferencia Planificada"
+
+#. module: stock_move_location
 #: model_terms:ir.ui.view,arch_db:stock_move_location.view_wiz_stock_move_location_form_stock_move_location
 msgid "UoM"
 msgstr "UdM"
@@ -235,14 +254,12 @@ msgstr "Si este movimiento es parte de movimiento de ubicaciones"
 #. module: stock_move_location
 #: model:ir.model,name:stock_move_location.model_wiz_stock_move_location
 #, fuzzy
-#| msgid "Part of move location"
 msgid "Wizard move location"
 msgstr "Mover desde otra ubicación"
 
 #. module: stock_move_location
 #: model:ir.model,name:stock_move_location.model_wiz_stock_move_location_line
 #, fuzzy
-#| msgid "Move Location lines"
 msgid "Wizard move location line"
 msgstr "Último movimiento"
 
